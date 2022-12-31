@@ -72,6 +72,11 @@ void uyeOl(vector<kisi>& v){
 
 }
 
+void bilgileriGoster(string ad,string soyad,string a){
+    cout<<"ad : "<<ad<<endl<<" soyad : "<<soyad<<endl<<" kripto  :"<<a<<endl;
+
+}
+
 bool girisYap(vector<kisi> &v){
     cout<<"adinizi giriniz : ";
     string ad;
@@ -95,6 +100,7 @@ bool girisYap(vector<kisi> &v){
                 string hesapSifresi = (*it).kriptoSifre;
                 if(girilenSifre == hesapSifresi){
                     cout<<"giris basarili..."<<endl;
+                    bilgileriGoster((*it).ad,(*it).soyad,(*it).kriptoSifre);
                     return true;
                 }
                 else throw 0;
